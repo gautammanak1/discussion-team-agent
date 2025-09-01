@@ -1,0 +1,19 @@
+services:
+  discussion-team-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8033:8033"   
+      - "10020:10020"
+      - "9999:9999" 
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    networks:
+      - discussion-team-network
+
+networks:
+  discussion-team-network:
+    driver: bridge
