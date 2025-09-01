@@ -26,3 +26,7 @@ beautifulsoup4
 lxml
 selenium
 webdriver-manager
+pycountry
+fake-useragent
+urllib3
+certifi
