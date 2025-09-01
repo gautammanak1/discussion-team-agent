@@ -18,3 +18,6 @@ starlette
 sse-starlette
 ddgs
 arxiv
+pypdf
+PyPDF2
+requests-oauthlib
