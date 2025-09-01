@@ -1,6 +1,6 @@
 # Discussion Team Agent
 
-![uagents](https://img.shields.io/badge/uagents-4A90E2) ![a2a](https://img.shields.io/badge/a2a-000000) ![agno](https://img.shields.io/badge/agno-FF69B4) ![innovationlab](https://img.shields.io/badge/innovationlab-3D8BD3) ![chatprotocol](https://img.shields.io/badge/chatprotocol-1D3BD4) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/gautammanak02)
+![uagents](https://img.shields.io/badge/uagents-4A90E2) ![a2a](https://img.shields.io/badge/a2a-000000) ![agno](https://img.shields.io/badge/agno-FF69B4) ![innovationlab](https://img.shields.io/badge/innovationlab-3D8BD3) ![chatprotocol](https://img.shields.io/badge/chatprotocol-1D3BD4) [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gautammanak1) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/gautammanak02)
 
 ## 🎯 Discussion Team Agent: Your AI-Powered Research Collaboration Partner
 
@@ -97,8 +97,8 @@ Discuss the societal impact of large language models.
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd collaboration_team
+git clone https://github.com/gautammanak1/discussion-team-agent.git
+cd discussion-team-agent
 ```
 
 2. **Install dependencies**
@@ -186,6 +186,12 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📁 GitHub Repository
+
+🔗 **[View on GitHub](https://github.com/gautammanak1/discussion-team-agent)**
+
+⭐ **Star this repository if you find it helpful!**
 
 ## 👨‍💻 Author
 
