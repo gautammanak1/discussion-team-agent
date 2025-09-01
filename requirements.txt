@@ -17,3 +17,4 @@ a2a-sdk[http-server]
 starlette
 sse-starlette
 ddgs
+arxiv
