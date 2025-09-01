@@ -21,3 +21,8 @@ arxiv
 pypdf
 PyPDF2
 requests-oauthlib
+googlesearch-python
+beautifulsoup4
+lxml
+selenium
+webdriver-manager
