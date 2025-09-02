@@ -14,20 +14,19 @@ from agno.team.team import Team
 from agno.tools.arxiv import ArxivTools
 from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.tools.googlesearch import GoogleSearchTools
-from agno.tools.hackernews import HackerNewsTools
 from typing_extensions import override
 
 reddit_researcher = Agent(
     name="Reddit Researcher",
     role="Research a topic on Reddit",
     model=Gemini(id="gemini-2.0-flash"), 
-    tools=[DuckDuckGoTools()], # DuckDuckGo can search Reddit
+    tools=[GoogleSearchTools()], # Use Google Search instead of DuckDuckGo for better reliability
     add_name_to_instructions=True,
     instructions=dedent("""
     You are a Reddit researcher specializing in detailed community analysis.
     You will be given a topic to research on Reddit.
-    Use the DuckDuckGo search tool to find the most relevant posts and discussions on Reddit for the given topic.
-    Prioritize results from reddit.com.
+    Use the Google Search tool to find the most relevant posts and discussions on Reddit for the given topic.
+    Search for "site:reddit.com" followed by your topic to find Reddit content.
     
     For each finding, provide:
     - Direct links to Reddit posts/threads when available
@@ -53,16 +52,17 @@ hackernews_researcher = Agent(
     name="HackerNews Researcher",
     model=Gemini(id="gemini-2.0-flash"),
     role="Research a topic on HackerNews.",
-    tools=[HackerNewsTools()],
+    tools=[GoogleSearchTools()], # Use Google Search instead of DuckDuckGo for better reliability
     add_name_to_instructions=True,
     instructions=dedent("""
     You are a HackerNews researcher specializing in technical and industry analysis.
     You will be given a topic to research on HackerNews.
-    Use the HackerNewsTools to find the most relevant posts and discussions on HackerNews.
+    Use the Google Search tool to find the most relevant posts and discussions on HackerNews.
+    Search for "site:news.ycombinator.com" or "site:hackernews.com" to find HackerNews content.
     
     For each finding, provide:
     - Direct links to HN posts
-    - Points (upvotes) and comment counts
+    - Points (upvotes) and comment counts when visible
     - Key technical insights and code examples
     - Industry implications and business impact
     - Technical challenges and solutions discussed
@@ -131,12 +131,13 @@ twitter_researcher = Agent(
     name="Twitter Researcher",
     model=Gemini(id="gemini-2.0-flash"),
     role="Research trending discussions and real-time updates",
-    tools=[DuckDuckGoTools()], # DuckDuckGo can search Twitter/X
+    tools=[GoogleSearchTools()], # Use Google Search instead of DuckDuckGo for better reliability
     add_name_to_instructions=True,
     instructions=dedent("""
     You are a Twitter/X researcher specializing in real-time trend analysis.
     You will be given a topic to research on Twitter/X.
-    Use the DuckDuckGo search tool to find trending discussions, influential voices, and real-time updates on Twitter/X.
+    Use the Google Search tool to find trending discussions, influential voices, and real-time updates on Twitter/X.
+    Search for "site:twitter.com" or "site:x.com" followed by your topic to find Twitter content.
     
     For each finding, provide:
     - Direct links to tweets when available

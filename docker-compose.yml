@@ -4,9 +4,9 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8033:8033"   
-      - "10020:10020"
-      - "9999:9999" 
+      - "8007:8007"   
+      - "10021:10021"
+      - "9993:9993" 
     env_file:
       - .env
     volumes:

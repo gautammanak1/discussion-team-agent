@@ -195,7 +195,7 @@ class SingleA2AAdapter:
                         f"{a2a_url}/",
                         json=payload,
                         headers={"Content-Type": "application/json"},
-                       timeout=self.timeout, 
+                        timeout=self.timeout, 
                     )
 
                     if response.status_code == 200:
@@ -220,11 +220,11 @@ class SingleA2AAdapter:
                                     return response_text.strip()
                             return "✅ Response received from A2A agent"
                     else:
-                        return f"A2A agent returned HTTP {response.status_code}"
+                        print(f"⚠️ A2A agent returned HTTP {response.status_code}, trying fallback...")
+                        return await self._call_executor_directly(message)
                 except Exception as e:
-                    return f"❌ Error communicating with A2A agent: {str(e)}"
-
-                return await self._call_executor_directly(message)
+                    print(f"⚠️ A2A communication failed: {str(e)}, trying fallback...")
+                    return await self._call_executor_directly(message)
 
             except Exception as e:
                 return f"❌ Error communicating with A2A agent: {str(e)}"

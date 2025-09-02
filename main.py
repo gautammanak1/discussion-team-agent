@@ -26,8 +26,8 @@ class DiscussionTeamSystem:
             A2AAgentConfig(
                 name="discussion_team_specialist",
                 description="AI Team for comprehensive research and discussion across various platforms (Reddit, HackerNews, Academic, Twitter).",
-                url="http://localhost:10020", # The URL where the A2A server for this agent will run
-                port=10020, # The port for the A2A server
+                url="http://localhost:10021", # The URL where the A2A server for this agent will run
+                port=9993, # The port for the A2A server
                 specialties=[
                     "research", "discussion", "consensus building", "social media analysis",
                     "academic research", "tech news", "community insights"
@@ -63,7 +63,7 @@ class DiscussionTeamSystem:
             agent_executor=discussion_executor,
             name="discussion_team_coordinator",
             description="Coordinator for routing discussion topics to the specialist team.",
-            port=8200, # The port for the uAgent coordinator
+            port=8007, # The port for the uAgent coordinator
             mailbox=True
         )
         print("✅ Discussion Team Coordinator created!")

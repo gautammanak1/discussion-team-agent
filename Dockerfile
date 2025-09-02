@@ -10,5 +10,5 @@ RUN apt-get update && apt-get install -y gcc \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENV PYTHONUNBUFFERED=1
-EXPOSE 8033
+EXPOSE 8007
 CMD ["python", "main.py"]
